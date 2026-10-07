@@ -1,0 +1,23 @@
+/* Estakhrjo Builder v2 additions — synchronized visual/code workspace */
+.pb-live-pull{border-color:rgba(34,211,238,.48)!important;background:rgba(34,211,238,.11)!important;color:#bdf9ff!important}
+.pb-code-dock{border-top:1px solid var(--pb-line);background:#03101d;direction:rtl}
+.pb-code-dock>header{min-height:43px;display:flex;align-items:center;gap:10px;padding:6px 10px;border-bottom:1px solid rgba(133,185,218,.14)}
+.pb-code-tabs{display:flex;gap:4px;direction:ltr}
+.pb-code-tabs button,.pb-code-dock>header>button{min-height:30px;padding:5px 10px;border:1px solid rgba(133,185,218,.18);border-radius:7px;background:rgba(255,255,255,.025);color:#9bc3d2;font:inherit;font-size:9px;cursor:pointer}
+.pb-code-tabs button.on{border-color:#22d3ee;background:rgba(34,211,238,.13);color:#dffcff}
+#shbCodeStatus{margin-right:auto;color:#6ee7b7;font-size:8.5px}
+#shbCodeStatus.error{color:#fca5a5}
+#shbCodeEditor{display:block;width:100%;height:240px;min-height:140px;resize:vertical;border:0;outline:0;background:#020a13;color:#d9f6ff;padding:14px 17px;font:12px/1.8 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;tab-size:2;white-space:pre;overflow:auto;direction:ltr;text-align:left}
+.pb-drafts-dialog header>div small{display:block;margin-top:3px;color:#8baaba;font-size:8px;font-weight:400}
+.pb-draft-create{padding:11px 14px;border-bottom:1px solid rgba(133,185,218,.1)}
+.pb-draft-create button{min-height:34px;border:1px solid rgba(34,211,238,.3);border-radius:8px;background:rgba(34,211,238,.1);color:#c9faff;padding:6px 10px;font:inherit;font-size:9px;cursor:pointer}
+.pb-drafts-dialog article>div:last-child{display:flex;gap:5px;align-items:center}
+.pb-drafts-dialog article button:last-child{border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.08);color:#fecaca}
+/* Keep the iframe's logical viewport at the selected breakpoint and scale only
+   its visual shell to fit the middle column. Otherwise "Desktop" inherited the
+   narrow editor-column width and the site activated tablet/mobile media rules. */
+.pb-canvas-scroll{overflow:hidden!important}
+.pb-canvas-stage{position:relative;margin:0 auto;flex:0 0 auto}
+.pb-canvas-device{position:absolute!important;top:0;left:50%;max-width:none!important;min-width:0!important;will-change:transform}
+@media(max-width:1120px){#shbCodeEditor{height:210px}.pb-live-pull{order:2}}
+@media(max-width:720px){.pb-code-dock>header{flex-wrap:wrap}.pb-code-tabs{width:100%}#shbCodeStatus{margin-right:0;margin-left:auto}#shbCodeEditor{height:190px;font-size:10px}.pb-toolbar .pb-live-pull{flex:1}}
